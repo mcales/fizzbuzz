@@ -5,6 +5,10 @@ $(document).ready(function(){
 	target = prompt("Please enter a positive non-decimal number.", "100");
 	max = parseInt(target);
 	}
+	while(max <= 0){
+	target = prompt("Please enter a positive non-decimal number.", "100");
+	max = parseInt(target);
+	}
 	function fizzbuzz(limit){
 		var count = 0;
 		while(count < limit){
