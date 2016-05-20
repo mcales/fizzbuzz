@@ -1,18 +1,24 @@
-	var count = 1;
-	while(count < 101){
-		if (count % 3 == 0){
-			if (count % 5 ==0){
+$(document).ready(function(){
+	var target = prompt("Please enter a positive non-decimal number.", "100");
+	var max = parseInt(target);
+	function fizzbuzz(limit){
+		var count = 0;
+		while(count < limit){
+			count++;
+			if (count % 3 == 0){
+				if (count % 5 ==0){
 				$(document.body).append("\nfizzbuzz\n");
-			}
-            else {
+				}
+            	else {
             	$(document.body).append("\nfizz\n");
+        		}
         	}
-		}
-		else if (count % 5 == 0){
+			else if (count % 5 == 0){
 			$(document.body).append("\nbuzz\n");
-		}
+			}
 		else{
 			$(document.body).append("\n" + count + "\n");
 		}
-		count++;
-	}
+	}}
+	fizzbuzz(max);
+})
